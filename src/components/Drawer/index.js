@@ -38,7 +38,7 @@ function Drawer({onClose, onRemove, items = [], opened}) {
         <div className={`${styles.overlay} ${opened ? styles.overlayVisible : ''}`}>
             <div className={styles.drawer}>
                 <h2 className="d-flex justify-between mb-20">Корзина
-                    <img onClick={onClose} className="remove-btn cu-p" src="/img/btn-close.svg" alt="remove"/>
+                    <img onClick={onClose} className="remove-btn cu-p" src="img/btn-close.svg" alt="remove"/>
                 </h2>
 
                 {
@@ -55,7 +55,7 @@ function Drawer({onClose, onRemove, items = [], opened}) {
                                                 <b>{obj.price} руб.</b>
                                             </div>
                                             <img onClick={() => onRemove(obj.id)} className="remove-btn"
-                                                 src="/img/btn-close.svg" alt="remove"/>
+                                                 src="img/btn-close.svg" alt="remove"/>
                                         </div>
                                     ))
                                     }
@@ -73,14 +73,14 @@ function Drawer({onClose, onRemove, items = [], opened}) {
                                             <b>{totalPrice / 100 * 5} руб.</b>
                                         </li>
                                     </ul>
-                                    <button disabled={isLoading} onClick={onClickOrder} className="greenButton">Оформить заказ<img src="/img/arrow.svg" alt="arrow"/></button>
+                                    <button disabled={isLoading} onClick={onClickOrder} className="greenButton">Оформить заказ<img src="img/arrow.svg" alt="arrow"/></button>
                                 </div>
                             </div>
                         ) : (
                             <Info
                                 title={isOrderComplete ? "Заказ оформлен!" : "Корзина пуста"}
                                 description={isOrderComplete ? `Ваш заказ #${orderId} скоро будет передан курьерской доставке` : "Добавь хотя бы одну пару кроссовок, чтобы сделать закза"}
-                                img={isOrderComplete ? "/img/order-processed.jpg" : "/img/cart-empty.png"}
+                                img={isOrderComplete ? "img/order-processed.jpg" : "img/cart-empty.png"}
                             />
                         )
                 }
