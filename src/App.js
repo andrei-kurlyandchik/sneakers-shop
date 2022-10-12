@@ -109,7 +109,7 @@ function App() {
                 <Routes>
                     <Route
                         exact
-                        path='/'
+                        path=''
                         element={
                             <Home
                                 items={items}
